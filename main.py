@@ -130,6 +130,24 @@ print("Length:", len(numbers))
 #[1, 2, 3, 4, 5]
 #Length: 5
 
+#Example
+#Access the elements of a list using their index.
+numbers = [1, 2, 3, 4, 5]
+print(numbers[0])
+print(numbers[3])
+#Output
+#1
+#4
+
+#Example
+#Modify the elements of a list using their index.
+numbers = [1, 2, 3, 4, 5]
+numbers[0] = 10
+print(numbers)
+#Output
+#[10, 2, 3, 4, 5]
+
+
 #Dictionary
 #A dictionary is a collection of key-value pairs. It is an unordered, mutable collection of items.
 #In Python, a dictionary is defined using curly braces {} and the key-value pairs are separated by commas.
@@ -483,3 +501,22 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
 #The socket connects to the server "example.com" on port 80.
 
 
+#Enum
+#An enumeration is a set of symbolic names bound to unique values.
+#In Python, enumerations are defined using the Enum class from the enum module.
+#Enumerations can be used to create a set of named constants.
+#Example
+#Create an enumeration for the days of the week.
+from enum import Enum
+class Weekday(Enum):
+    MONDAY = 1
+    TUESDAY = 2
+    WEDNESDAY = 3
+    THURSDAY = 4
+    FRIDAY = 5
+    SATURDAY = 6
+    SUNDAY = 7
+#Access the values of the enumeration.
+print(Weekday.MONDAY.value)
+#Output
+#1
